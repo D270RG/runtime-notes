@@ -1,0 +1,91 @@
+//--common multibutton container
+.button-container{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  >button{
+    margin-left:3px;
+    display:flex;
+    justify-content: flex-end;
+  }
+}
+//--note--
+.note-container{
+  width:100vw;
+}
+.note{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  width:100%;
+  padding:5px;
+  color:rgb(40, 40, 40);
+  cursor:pointer;
+  background-color: rgb(245, 245, 245);
+  &:hover{
+    background-color: rgb(232, 232, 232);
+  }
+
+  //--text container---
+  >.note-text{
+    max-width:50%;
+    word-break:break-word;
+    flex-wrap:wrap;
+    user-select:none;
+  }
+}
+
+//--form--
+.clickbox{
+  position:absolute;
+  height:100vh;
+  width:100vw;
+  background-color:rgba(0, 0, 0, 0.632);
+  left:0px;
+  top:0px;
+}
+.form-placeholder{
+  //position styles
+  position:absolute;
+  left:50%;
+  top:50%;  
+  transform:translate(-50%,-50%);
+  width:400px;
+
+  //styling styles
+  padding:1rem;
+  padding-bottom:0.5rem;
+  background-color:rgb(242, 242, 242);
+  border-radius:15px;
+
+  //children elements
+  >.form-close{
+    position:absolute;
+    padding:0px;
+    margin:0px;
+    top:5px;
+    right:10px;
+    background-color:transparent;
+    color:rgb(20, 20, 20);
+    :hover{
+      color:rgb(117, 117, 117);
+    }
+  }
+}
+.popup-form{
+  //position styles
+  position:relative;
+  height:100%;
+  width:100%;
+  left:0px;
+  top:0px;
+  
+  //children elements
+  >input{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  >label{
+    color:rgb(48, 48, 48)
+  }
+}
