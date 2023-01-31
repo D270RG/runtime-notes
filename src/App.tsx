@@ -67,7 +67,7 @@ export default function App() {
     setFormVisibility(undefined);
   }
   return (
-    <div>
+    <div className='page-container'>
         <div className="note-container">
             {notes.map((noteEntry:Note,index)=>{
             return(<div className="note" onClick={()=>{setFormVisibility({index:index,initialValue:{...noteEntry}})}}>
@@ -84,7 +84,9 @@ export default function App() {
             })}
             {formVisibility && <EditForm cancelCallback={closeEditForm} index={formVisibility.index} initialState={formVisibility.initialValue}/>}
         </div>
-        <AddForm/>
+        {!formVisibility && <div className="float-form">
+            <AddForm/>
+        </div>}
     </div>
   )
 }

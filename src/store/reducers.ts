@@ -41,6 +41,6 @@ export const notesSlice = createSlice({
       } catch(e) {
         console.log(e);
       }
-    },
+    }
   }
 });

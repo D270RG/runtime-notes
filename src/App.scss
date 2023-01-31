@@ -1,3 +1,29 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #303030 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #303030;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+//--page container
+.page-container{
+  height:100vh;
+  background-color:rgb(247, 247, 247);
+}
 //--common multibutton container
 .button-container{
   display:flex;
@@ -10,20 +36,17 @@
   }
 }
 //--note--
-.note-container{
-  width:100vw;
-}
 .note{
   display:flex;
   align-items:center;
   justify-content: space-between;
   width:100%;
   padding:5px;
-  color:rgb(40, 40, 40);
+  color:rgb(35, 35, 35);
   cursor:pointer;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(241, 241, 241);
   &:hover{
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(237, 237, 237);
   }
 
   //--text container---
@@ -37,16 +60,16 @@
 
 //--form--
 .clickbox{
-  position:absolute;
-  height:100vh;
-  width:100vw;
+  position:fixed;
+  height:100%;
+  width:100%;
   background-color:rgba(0, 0, 0, 0.632);
   left:0px;
   top:0px;
 }
 .form-placeholder{
   //position styles
-  position:absolute;
+  position:fixed;
   left:50%;
   top:50%;  
   transform:translate(-50%,-50%);
@@ -88,4 +111,13 @@
   >label{
     color:rgb(48, 48, 48)
   }
+}
+.float-form{
+  padding:10px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  background-color:rgb(255, 255, 255);
+  width:100%;
+  position:fixed;
+  bottom:0px;
 }
