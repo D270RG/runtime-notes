@@ -76,7 +76,8 @@ export default function App() {
                             <Button variant='dark' onClick={()=>{
                                     setFormVisibility({index:index,initialValue:{...noteEntry}});
                                 }}><i className="bi bi-pencil-square"></i></Button>
-                            <Button variant='danger' onClick={()=>{
+                            <Button variant='danger' onClick={(e)=>{
+                                    e.stopPropagation();
                                     notesDispatch(notesSlice.actions.deleteNote({index:index}));
                                 }}><i className="bi bi-trash"></i></Button>
                             </div>
